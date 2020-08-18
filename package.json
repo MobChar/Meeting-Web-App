@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "simple meeting app",
   "main": "index.js",
-
   "scripts": {
     "start": "node index.js"
   },
@@ -14,6 +13,7 @@
   "author": "MobChar",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.5",
     "express": "^4.17.1",
     "peerjs": "^1.3.1",
     "serve-favicon": "^2.5.0",

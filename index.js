@@ -30,6 +30,7 @@ const server =
             res.status(404).send('404 Page not found !');
         })
         .use(function (err, req, res, next) {
+            console.log(err);
             res.status(500).send('500 Something broke!')
         })
         .listen(3000);
