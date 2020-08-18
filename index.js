@@ -17,9 +17,11 @@ const server =
             next();
         })
         .get('/', function (req, res) {//Main page
+            console.log("Receive index");
             res.render('index.ejs', {
                 rooms: Array.from(roomRouter.onlineList.keys())
             });
+            console.log("Ended index");
         }
         )
         .use(roomRouter.router)//Router handler
