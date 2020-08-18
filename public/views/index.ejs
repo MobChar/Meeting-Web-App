@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="roomStyle.css">
+    <script src="/jquery.js"></script>
+    <script src="/peer.js"></script>
+</head>
+
+<body>
+    <h1>Available rooms</h1>
+    <table>
+        <tr>
+            <th>Room id</th>
+            <th>Room link</th>
+        </tr>
+        <% rooms.forEach(function(room) { %>
+        <tr>
+            <td><%=room%></td>
+            <td><a href="/room/<%= room %>">link</a></td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+
+</html>
