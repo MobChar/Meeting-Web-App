@@ -35,6 +35,7 @@ const server =
         })
         .listen(3000);
 //Set up socket 
+console.log("EE");
 const io = require('socket.io')(server);
 io.eio.pingTimeout = 2000;
 io.eio.pingInterval = 5000;
