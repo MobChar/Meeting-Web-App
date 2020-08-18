@@ -15,7 +15,7 @@ openStream().then(localStream => {
         setCamera(localStream, camera);
     })
 
-    const socket = io('http://192.168.1.13:3000',{
+    const socket = io('https://meetting-web-app.herokuapp.com:443',{
         reconnection: false
     });
     socket.once('connect', function () {
