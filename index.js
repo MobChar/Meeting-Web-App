@@ -7,11 +7,15 @@ const roomRouter = require('./config/routes/roomRouter');
 const app = express();
 exports.app = app;
 
+
+if (!fs.existsSync(__dirname+'/public/')){
+    console.log("Not exist");
+}
 const server =
     app
         .set('view engine', 'ejs')
         .set('views', __dirname + '/public/views')
-        // .use(favicon(__dirname + '/public/favicon/favicon.ico'))
+        .use(favicon(__dirname + '/public/favicon/favicon.ico'))
         .use(function (req, res, next) {//Debugging request
             console.log(req.method + " " + req.path);
             next();
@@ -33,7 +37,7 @@ const server =
             console.log(err);
             res.status(500).send('500 Something broke!')
         })
-        .listen(3000);
+        .listen(process.env.PORT || 3000);
 //Set up socket 
 console.log("EE");
 const io = require('socket.io')(server);
