@@ -1,8 +1,8 @@
 const express = require('express');
 const fs = require('fs');
 const favicon = require('serve-favicon');
-const setupSocket = require('./setupSocket');
-const roomRouter = require('./routes/roomRouter');
+const setupSocket = require('./config/setupSocket');
+const roomRouter = require('./config/routes/roomRouter');
 
 const app = express();
 exports.app = app;

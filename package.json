@@ -2,10 +2,10 @@
   "name": "meeting-web-app",
   "version": "1.0.0",
   "description": "simple meeting app",
-  "main": "config/index.js",
+  "main": "index.js",
 
   "scripts": {
-    "start": "node config/index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
