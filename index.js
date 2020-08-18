@@ -10,8 +10,8 @@ exports.app = app;
 const server =
     app
         .set('view engine', 'ejs')
-        .set('views', __dirname + '/../public/views')
-        .use(favicon(__dirname + '/../public/favicon/favicon.ico'))
+        .set('views', __dirname + '/public/views')
+        .use(favicon(__dirname + '/public/favicon/favicon.ico'))
         .use(function (req, res, next) {//Debugging request
             console.log(req.method + " " + req.path);
             next();
@@ -23,7 +23,7 @@ const server =
         }
         )
         .use(roomRouter.router)//Router handler
-        .use(express.static(__dirname + '/../public/'))//Static file
+        .use(express.static(__dirname + '/public/'))//Static file
         .get('*', function (req, res) {
             res.status(404).send('404 Page not found !');
         })
